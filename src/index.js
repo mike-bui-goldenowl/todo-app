@@ -9,7 +9,7 @@ require('react-web-vector-icons/fonts');
 
 
 ReactDOM.render(
-    <Router basename={window.location.pathname || ''}>
+    <Router basename='/'>
         <App />
     </Router>
     , document.getElementById('root'));
