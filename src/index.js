@@ -9,7 +9,7 @@ require('react-web-vector-icons/fonts');
 
 
 ReactDOM.render(
-    <Router>
+    <Router basename='/go'>
         <App />
     </Router>
     , document.getElementById('root'));
