@@ -1,0 +1,32 @@
+.footer{
+    text-align: center;
+    margin-top:20px;
+    margin-bottom:10px;
+    p{
+        margin: 0;
+    }
+
+    .name{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .name-des{
+       border:1px solid;
+       background-color: #469c4e;;
+       padding:5px 10px;
+       border-radius: 10px;
+       color: white;
+       display: inline-block;
+
+       &:hover{
+           color:#4a6f00;
+           background-color: #e8eaea;
+           font-size: 20;
+           font-weight: bold;
+       }
+    }
+
+
+
+}

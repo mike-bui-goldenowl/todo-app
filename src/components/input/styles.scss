@@ -1,0 +1,16 @@
+.input{
+    outline: none;
+    min-width: 70%;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    border-bottom:1px solid;
+
+    input{
+        outline-style: none;
+        border: none;
+        width: 100%;
+        background-color: transparent;
+        margin-left: 10px;
+    }
+};

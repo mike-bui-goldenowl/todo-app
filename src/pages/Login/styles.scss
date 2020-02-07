@@ -1,0 +1,78 @@
+
+.section-login{
+    display: flex;
+    justify-content: center;
+
+    h1{
+        margin: 30px 0 70px;
+    }
+
+    img{
+        background-size: cover;
+        position: absolute;
+        z-index: -100;
+        width:100%;
+        height:100%
+    }
+    .form{
+        background-color: #e8eaea;
+        width: 50%;
+        display: block;
+        text-align: center;
+        padding: 20px 35px;
+        border-radius: 10px;
+        margin-top: 50px;
+        @media screen and (max-width: 1200px) {
+            width: 95%;
+        }
+        p{
+            margin:0
+        }
+        .input{
+            margin-top: 30px;
+        }
+        .forgot{
+            margin:25px 0 50px;
+            p{
+                text-align: right;
+            }
+        }
+        .button{
+            width: auto;
+            display: flex;
+            justify-content: center;
+            margin:10px 0;
+            transition: opacity 2s;
+            transition: background-color 2s;
+
+            &:hover{
+                opacity: 0.5;
+            }
+
+    
+            .btn-login{
+                background: url('../../assets/images/bg_header.jpg');
+                width: 50%;
+                padding:10px;
+                border-radius: 10px;
+                background-size: cover;
+                background-position: center;
+                color:white;
+                font-size: 25px;
+                font-weight: bold;
+                &.sign-up{
+                    background-position: inherit;
+                }
+
+                &:active{
+                    opacity: 0.3;
+                    color:black
+                }
+            }
+        }
+
+        .footer{
+            margin-top:100px
+        }
+    }
+}

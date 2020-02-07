@@ -1,0 +1,24 @@
+.inner{
+    width:50%;
+    background-color: white;
+    padding:20px;
+    margin:0 auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 0px;
+    @media screen and (max-width: 1200px) {
+        width: 95%;
+    }
+
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #469c4e;
+        & h1{
+            color:white;
+        }
+    }
+
+    margin-top: -20px;
+}
+

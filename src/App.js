@@ -1,26 +1,62 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from './redux/store';
+import {
+  Route,
+  Switch,
+  useLocation
+} from 'react-router-dom';
 
-function App() {
+//Pages
+import Main from './pages/Main';
+import Login from './pages/Login';
+import Modal from './components/modal';
+
+//Components
+import AppLoading from './components/appLoading';
+
+export default function App() {
+  const location = useLocation();
+  const showModal = location.state && location.state.showModal;
+  console.log(location);
+  //console.log(showModal);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <div>
+          <Switch location={showModal||location}>
+            <Route
+              path='/'
+              exact
+              // render={()=>
+              //   this.props.currentUser?(<Main/>) : (<Redirect to='/login'/>)
+              // }
+              component={Main}
+            >
+              <Main />
+            </Route>
+            <Route
+              path='/login'
+              exact
+              component={Login}
+            >
+              <Login />
+            </Route>
+            <Route path='/todo/:id' component={Login}>
+              <Login />
+            </Route>
+          </Switch>
+          {showModal && <Route
+            path='/todo/:id'
+          >
+            <Modal />
+          </Route>
+          }
+        </div>
+        <AppLoading />
+      </PersistGate>
+    </Provider>
   );
-}
 
-export default App;
+}

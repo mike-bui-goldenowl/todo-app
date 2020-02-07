@@ -1,0 +1,21 @@
+.blockTodo{
+    margin:50px 0;
+    .block{
+        background: #f5ffe2;
+        border-radius: 10px;
+        box-shadow: 2px 6px 10px 0px;
+        overflow: hidden;
+    };
+    .blockTitle{
+        display: flex;
+        align-items: center;
+
+        span{
+            font-size: 25px;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    
+}
