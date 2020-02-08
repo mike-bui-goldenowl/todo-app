@@ -27,7 +27,7 @@ class Item extends React.Component {
         this.state = {
             isEditting: false,
             item: {},
-            oldText: ''
+            oldText: '',
         };
         this.textInput = React.createRef();
     }

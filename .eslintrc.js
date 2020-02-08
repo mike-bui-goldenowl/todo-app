@@ -1,58 +1,113 @@
 module.exports = {
-    "env": {
-      "node": true,
-      "browser": true,
-      "es6": true,
-      "commonjs": true
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
     },
-    "plugins": [
-      "react"
-    ],
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended"
-    ],
-    "settings": {
-      "import/resolver": {
-        "node": {
-          "paths": [
-            "./"
-          ]
-        }
+    "import/resolver": {
+      "babel-module": {
+        "root": [
+          "./src"
+        ],
+        "@asset": [
+          "./assets"
+        ],
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
       }
-    },
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true,
-        "experimentalObjectRestSpread": true,
-        "modules": true
-      }
-    },
-    "rules": {
-      "react/prefer-stateless-function": 0,
-      "linebreak-style": 0,
-      "jsx-a11y/heading-has-content": 0,
-      "jsx-a11y/href-no-hash": 0,
-      "jsx-a11y/anchor-is-valid": 0,
-      "no-underscore-dangle": 0,
-      "react/no-find-dom-node": 0,
-      "react/prop-types": 0,
-      "no-nested-ternary": 0,
-      "react/display-name": 0,
-      "quotes": [
-        2,
-        "single",
-        "avoid-escape"
-      ],
-      "jsx-quotes": [
-        "error",
-        "prefer-single"
-      ],
-      "semi": [
-        "error",
-      ]
     }
-  };
+  },
+  "editor.codeActionsOnSave":{
+    "source.fixAll": true
+  },
+  "rules": {
+    "no-alert": "off",
+    "no-console": "off",
+    "react/sort-comp": "off",
+    "react/no-did-mount-set-state": "off",
+    "no-debugger": "off",
+    "global-require": "off",
+    "no-restricted-globals": "off",
+    "react/forbid-prop-types": "off",
+    "react/require-default-props": "off",
+    "react/prefer-stateless-function": "off",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "import/no-extraneous-dependencies": "off",
+    "import/no-named-as-default-member": "off",
+    "import/prefer-default-export": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "import/first": "off",
+    "max-len": [
+      "error",
+      120,
+      {
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowShortCircuit": true
+      }
+    ],
+    "no-underscore-dangle": "off",
+    "prefer-promise-reject-errors": "off",
+    "linebreak-style": "off",
+    "no-plusplus": "off",
+    "no-nested-ternary": "off",
+    "no-lonely-if": "off",
+    "no-use-before-define": [
+      "error",
+      {
+        "variables": false
+      }
+    ],
+    "react/prop-types": [
+      0
+    ],
+    "react/no-string-refs": [
+      0
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "multiline": true
+      }
+    ],
+    "react/jsx-no-bind": [
+      0
+    ],
+    "semi": [
+      "error",
+    ]
+  }
+};

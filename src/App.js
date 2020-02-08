@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './redux/store';
@@ -9,25 +9,23 @@ import {
 } from 'react-router-dom';
 
 //Pages
-import Main from './pages/Main';
+import Main from "./pages/Main";
 import Login from './pages/Login';
 import Modal from './components/modal';
 
-//Components
+// Components
 import AppLoading from './components/appLoading';
 
 export default function App() {
   const location = useLocation();
   const showModal = location.state && location.state.showModal;
-  console.log(location);
-  //console.log(showModal);
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <div>
-          <Switch location={showModal||location}>
+          <Switch location = { showModal || location }>
             <Route
-              path='/'
+              path="/"
               exact
               // render={()=>
               //   this.props.currentUser?(<Main/>) : (<Redirect to='/login'/>)
@@ -58,5 +56,4 @@ export default function App() {
       </PersistGate>
     </Provider>
   );
-
 }
