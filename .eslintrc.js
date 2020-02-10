@@ -16,17 +16,17 @@ module.exports = {
           "./src"
         ],
         "@asset": [
-          "./assets"
+          "./src/assets"
         ],
         "extensions": [
           ".js",
           ".jsx"
         ]
       }
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
     }
-  },
-  "editor.codeActionsOnSave":{
-    "source.fixAll": true
   },
   "rules": {
     "no-alert": "off",
@@ -106,8 +106,8 @@ module.exports = {
     "react/jsx-no-bind": [
       0
     ],
-    "semi": [
-      "error",
-    ]
+    "jsx-a11y/no-autofocus": [ 0, {
+      "ignoreNonDOM": true
+  }]
   }
 };
