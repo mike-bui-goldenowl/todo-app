@@ -17,8 +17,11 @@
             width: 100%;
         }
     };
-
+    
     .button{
         width:20%;
+        @media screen and (max-width: 480px) {
+            font-size: 15px;
+          }
     }
 }
