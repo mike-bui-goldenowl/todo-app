@@ -1,23 +1,39 @@
 
-    .content-modal{
-        width: 80%;
-        height: auto;
-        top:100px;
-        left: 0;
-        right: 0;
-        background-color: white;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        border:2px solid green;
+    .block-modal{
+        width: 100%;
+        height: 100%;
+        background:rgba(17, 37, 15, 0.7);
         position: fixed;
-        margin:0 auto;
-        overflow: hidden;
-        padding:20px 20px 40px ;
+        display: flex;
+        justify-content: center;
         align-items: center;
-        h3{
-            margin-bottom: 10px;
+        top:0;
+        .content-modal{
+            width: 80%;
+            height: auto;
+            background-color: white;
+            border-radius: 10px;
+            border:2px solid green;
+            overflow: hidden;
+            padding:20px 20px 40px ;
+            h3{
+                margin-bottom: 10px;
+            }
+            .top{
+                position: relative;
+                .button-close{
+                    position: absolute;
+                    top:0;
+                    right:0;
+                    color:#ff0000;
+                    &:hover{
+                        color:#6b1010
+                    }
+                }
+            }
         }
+
     }
+    
 
 
