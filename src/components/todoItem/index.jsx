@@ -103,8 +103,8 @@ class Item extends React.Component {
             className="content"
             role="button"
             tabIndex={0}
-            onClick={(!isEditting && isModal) && this.handleView}
-            onKeyDown={(!isEditting && isModal) && this.handleView}
+            onClick={(!isEditting && isModal) ? this.handleView : null}
+            onKeyDown={(!isEditting && isModal) ? this.handleView : null}
           >
             {!item.isCompleted ? (
               <AiFillPushpin

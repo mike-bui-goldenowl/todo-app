@@ -33,19 +33,16 @@ export default function App() {
               //   this.props.currentUser?(<Main/>) : (<Redirect to='/login'/>)
               // }
               component={Main}
-            >
-              <Main />
-            </Route>
+            />
+
             <Route
               path="/login"
               exact
               component={Login}
-            >
-              <Login />
-            </Route>
-            <Route path="/todo/:id" component={Login}>
-              <Login />
-            </Route>
+            />
+
+            <Route path="/todo/:id" component={Login} />
+
           </Switch>
           {showModal && (
           <Route
