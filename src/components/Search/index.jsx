@@ -44,7 +44,7 @@ class Search extends React.Component {
               onChange={this.handleChangeText}
               placeholder="Type something you wana do"
             />
-            <Button className="button" variant="success" size="lg">
+            <Button className="button" variant="success" size="lg" onClick={this.handleSubmit}>
               Add
             </Button>
           </div>
