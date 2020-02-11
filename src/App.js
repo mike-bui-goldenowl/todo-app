@@ -10,8 +10,8 @@ import Loadable from 'react-loadable';
 
 import { store, persistor } from './redux/store';
 // Pages
- import Main from './pages/Main';
- import Login from './pages/Login';
+// import Main from './pages/Main';
+// import Login from './pages/Login';
 import Modal from './components/modal';
 // Components
 import AppLoading from './components/appLoading';
@@ -44,13 +44,13 @@ export default function App() {
               // render={()=>
               //   this.props.currentUser?(<Main/>) : (<Redirect to='/login'/>)
               // }
-              component={Main}
+              component={LoadableMain}
             />
 
             <Route
               path="/login"
               exact
-              component={Login}
+              component={LoadableLogin}
             />
 
             <Route path="/todo/:id" component={LoadableLogin} />
