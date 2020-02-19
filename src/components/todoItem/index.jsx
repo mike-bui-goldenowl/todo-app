@@ -46,10 +46,6 @@ class Item extends React.Component {
         });
         return;
       }
-      if (this.textInput.current) {
-        this.textInput.current.focus();
-      }
-
       this.setState({
         isEditting: true,
         oldText: item.text,
