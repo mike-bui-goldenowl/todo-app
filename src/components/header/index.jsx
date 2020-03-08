@@ -30,7 +30,13 @@ const Header = ({ history, setAppLoading }) => {
         </div>
 
       </div>
-      <div className="right" onClick={handleLogOut}>
+      <div
+        role="button"
+        onKeyDown={() => {}}
+        tabIndex={0}
+        className="right"
+        onClick={handleLogOut}
+      >
         <AiOutlineLogout
           size={70}
           color="white"
